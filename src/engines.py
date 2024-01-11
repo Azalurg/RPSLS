@@ -1,10 +1,12 @@
+import sys
+
 class Engine:
     def __init__(self, conditions, options):
         self.conditions = conditions
         self.options = options
 
         if len(self.conditions) != len(self.options):
-            exit("Wrong game engine")
+            sys.exit("Wrong game engine - conditions don't match options")
 
     def get_result(self, player: int, bot: int) -> int:
         return self.conditions[player][bot]

@@ -1,2 +1,5 @@
  [FORMAT]
  max-line-length=79
+
+ [MASTER]
+disable=C0114, C0115, C0116
