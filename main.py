@@ -25,5 +25,16 @@ if __name__ == "__main__":
             continue
 
         next_game = input("Want to try again? (Y/n): ")
+        os.system("cls" if os.name == "nt" else "clear")
         if next_game.lower() not in ["", " ", "y", "yes"]:
             break
+
+    print("Results RPS:")
+    sgr = simple_game.end()  # simple game results
+    print("w\tl\td\ttotal")
+    print(f"{sgr[0]}\t{sgr[1]}\t{sgr[2]}\t{sgr[3]}\t")
+
+    print("Results RPSLS")
+    agr = advance_game.end()  # advance game results
+    print("w\tl\td\ttotal")
+    print(f"{agr[0]}\t{agr[1]}\t{agr[2]}\t{agr[3]}\t")
