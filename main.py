@@ -1,3 +1,4 @@
+"""Main game loop"""
 import os
 
 from src.engines import SimpleEngine, AdvanceEngine
@@ -11,12 +12,13 @@ if __name__ == "__main__":
     os.system("cls" if os.name == "nt" else "clear")
     print("Welcome to Rock Paper Scissors (Lizard Spock)")
 
-    while True or i < 123456789:
+    while i < 123456789:
+        i += 1
         print("Choose game mode: 1. RPS; 2. RPSLS; 0. Exit")
         decision = input("Decision: ")
         if decision == "0":
             break
-        elif decision == "1":
+        if decision == "1":
             simple_game.play()
         elif decision == "2":
             advance_game.play()
