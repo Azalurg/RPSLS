@@ -26,19 +26,24 @@ class Game:
             decision = int(input("Decision: "))
             if decision <= 0:
                 break
-            decision -= 1
+            player = decision - 1
             bot = randint(0, 2)
             print(
-                "You: {};\tBot: {}".format(
-                    self.weapon.get(decision), self.weapon.get(bot)
+                "Player: {};\tBot: {}".format(
+                    self.weapon.get(player), self.weapon.get(bot)
                 )
             )
-            winner = self.simple.get_result(decision, bot)
+            winner = self.simple.get_result(player, bot)
             if winner == 1:
+                self.wins += 1
                 print("Win")
             elif winner == 0:
+                self.draws += 1
                 print("Draw")
             else:
+                self.looses += 1
                 print("Loos")
             os.system("cls" if os.name == "nt" else "clear")
         print("The End")
+        total_games = self.wins + self.looses + self.draws
+        print(f"w\tl\td\ttotal\n{self.wins}\t{self.looses}\t{self.draws}\t{total_games}")
