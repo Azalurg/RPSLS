@@ -1,4 +1,4 @@
-from src.engines import SimpleEngine, AdvanceEngine, Engine
+from src.engines import Engine
 from src.bot import Bot
 
 
@@ -20,13 +20,13 @@ class Game:
         winner = self.engine.get_result(player_option, bot_option)
         if winner == 1:
             self.wins += 1
-            print("Win")
+            print(f"Player wins!!! ({player_option_str} vs. {bot_option_str})")
         elif winner == 0:
             self.draws += 1
-            print("Draw")
+            print("It was a draw")
         else:
             self.looses += 1
-            print("Loos")
+            print(f"Boot wins... ({player_option_str} vs. {bot_option_str})")
 
     def end(self) -> (int, int, int, int):
         total_games = self.wins + self.looses + self.draws

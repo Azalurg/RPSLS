@@ -6,5 +6,8 @@ class Bot:
 
     def play(self) -> int:
         self.games_played += 1
+        return self.get_seed() % self.options
+
+    def get_seed(self):
         self.seed = (self.seed * self.games_played + 997) % 9999991
-        return self.seed % self.options
+        return self.seed

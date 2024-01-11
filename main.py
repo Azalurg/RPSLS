@@ -39,4 +39,11 @@ if __name__ == "__main__":
     print("Results RPSLS")
     agr = advance_game.end()  # advance game results
     print("w\tl\td\ttotal")
-    print(f"{agr[0]}\t{agr[1]}\t{agr[2]}\t{agr[3]}\t")
+    print(f"{agr[0]}\t{agr[1]}\t{agr[2]}\t{agr[3]}\t\n")
+
+    if sgr[0] + agr[0] > sgr[1] + agr[1]:
+        print("Congratulations! You win!")
+    elif sgr[0] + agr[0] < sgr[1] + agr[1]:
+        print("Unfortunately Bot wins :-(")
+    else:
+        print("What a game, but it is a draw...")
