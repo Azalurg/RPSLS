@@ -27,3 +27,8 @@ class Game:
         else:
             self.looses += 1
             print("Loos")
+
+    def end(self) -> (int, int, int, int):
+        total_games = self.wins + self.looses + self.draws
+        game_result = (self.wins, self.looses, self.draws, total_games)
+        return game_result
