@@ -7,7 +7,6 @@ from src.game import Game
 if __name__ == "__main__":
     simple_game = Game(SimpleEngine())
     advance_game = Game(AdvanceEngine())
-    i = 0
 
     os.system("cls" if os.name == "nt" else "clear")
     print("Welcome to Rock Paper Scissors (Lizard Spock)")

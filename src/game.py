@@ -16,9 +16,9 @@ class Game:
     def play(self):
         self.engine.print_options()
         player_option = self._player_input()
-        player_option_str = self.engine.options[player_option]
+        player_option_str = self.engine.get_string(player_option)
         bot_option = self.bot.play()
-        bot_option_str = self.engine.options[bot_option]
+        bot_option_str = self.engine.get_string(bot_option)
 
         winner = self.engine.get_result(player_option, bot_option)
         if winner == 1:
