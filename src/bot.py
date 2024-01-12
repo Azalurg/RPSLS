@@ -10,5 +10,5 @@ class Bot:
         return self.get_seed() % self.options
 
     def get_seed(self) -> int:
-        self.seed = (self.seed * (self.played+1) + self.won + 997) % 9999991
+        self.seed = (self.seed * (self.played + 1) + self.won + 997) % 9999991
         return self.seed

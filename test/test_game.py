@@ -9,7 +9,8 @@ class BinaryEnum(Enum):
     ONE = 1
 
 
-get_engine = lambda: Engine([[0, 1], [1, 0]], BinaryEnum)
+def get_engine() -> Engine:
+    return Engine([[0, 1], [1, 0]], BinaryEnum)
 
 
 class TestGame:

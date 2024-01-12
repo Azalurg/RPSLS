@@ -1,4 +1,4 @@
-from src.engines import *
+from src.engines import SimpleEngine, Engine, AdvanceEngine
 
 
 class TestEngines:

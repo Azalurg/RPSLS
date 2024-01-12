@@ -3,17 +3,17 @@ from enum import Enum
 
 
 class Options(Enum):
-    Rock = 0
-    Paper = 1
-    Scissors = 2
+    ROCK = 0
+    PAPER = 1
+    SCISSORS = 2
 
 
 class ExtendedOptions(Enum):
-    Rock = 0
-    Paper = 1
-    Scissors = 2
-    Lizard = 3
-    Spock = 4
+    ROCK = 0
+    PAPER = 1
+    SCISSORS = 2
+    LIZARD = 3
+    SPOCK = 4
 
 
 class Engine:
@@ -36,7 +36,7 @@ class Engine:
         print("")
 
     def get_string(self, option: int) -> str:
-        return self.options(option).name
+        return str(self.options(option).name).capitalize()
 
 
 class SimpleEngine(Engine):
