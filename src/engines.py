@@ -1,5 +1,6 @@
 import sys
 
+
 class Engine:
     def __init__(self, conditions, options):
         self.conditions = conditions
@@ -13,7 +14,10 @@ class Engine:
 
     def print_options(self):
         for i, option in enumerate(self.options):
-            print(f"{i+1}. {option}", end="; ")
+            if i == 0:
+                print(f"*{i+1}. {option}*", end="; ")
+            else:
+                print(f"{i+1}. {option}", end="; ")
         print("")
 
 

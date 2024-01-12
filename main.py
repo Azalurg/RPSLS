@@ -12,13 +12,12 @@ if __name__ == "__main__":
     os.system("cls" if os.name == "nt" else "clear")
     print("Welcome to Rock Paper Scissors (Lizard Spock)")
 
-    while i < 123456789:
-        i += 1
-        print("Choose game mode: 1. RPS; 2. RPSLS; 0. Exit")
+    for _ in range(123456789):
+        print("Choose game mode: *1. RPS*; 2. RPSLS; 0. Exit")
         decision = input("Decision: ")
         if decision == "0":
             break
-        if decision == "1":
+        if decision in ["1", "", " "]:
             simple_game.play()
         elif decision == "2":
             advance_game.play()
