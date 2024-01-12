@@ -4,7 +4,8 @@ import os
 from src.engines import SimpleEngine, AdvanceEngine
 from src.game import Game
 
-if __name__ == "__main__":
+
+def main_loop():
     simple_game = Game(SimpleEngine())
     advance_game = Game(AdvanceEngine())
 
@@ -45,3 +46,8 @@ if __name__ == "__main__":
         print("Unfortunately Bot wins :-(")
     else:
         print("What a game, but it is a draw...")
+    return 0
+
+
+if __name__ == "__main__":
+    main_loop()
