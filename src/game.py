@@ -29,7 +29,7 @@ class Game:
             print("It was a draw")
         else:
             self.looses += 1
-            self.bot.game_won += 1
+            self.bot.won += 1
             print(f"Boot wins... ({player_option_str} vs. {bot_option_str})")
 
     def end(self) -> (int, int, int, int):
